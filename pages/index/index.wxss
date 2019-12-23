@@ -1,0 +1,34 @@
+.weather_index{
+  height: 100vh;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+ justify-content:space-around; 
+}
+.getcity view{
+  font-size: 40rpx;
+  color: #cccfff;
+}
+.weather_data{
+  font-size: 80rpx;
+  color:red
+}
+.weather_listdata{
+width: 100%;
+ display: flex;
+ text-align: center;
+  flex-direction:column;
+ justify-content:space-around; 
+ 
+}
+.wh_datas{
+   display: flex;
+   margin: 10rpx 0;
+   
+}
+.wh_tex{
+width: 33.33%
+}
+button{
+  width: 100vw
+}

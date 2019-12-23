@@ -1,0 +1,35 @@
+<view class="weather_index">
+<view wx:if="{{citaarry.length===0}}" class="butunewv">
+   <button open-type="getUserInfo" bindgetuserinfo="heandeluse" plain type='primary'>获取您在的城市</button>
+   <view>默认是北京市天气</view>
+    </view>
+  <picker wx:else mode ='region' class="getcity" bindchange="changcity">
+    <view >{{citaarry}}</view>
+  </picker>
+  <text class="weather_data">{{nowweather.tmp}}℃{{nowweather.cond_txt}}</text>
+  <view class="weather_imgae">
+    <image src='/images/{{nowweather.cond_code}}.png'></image> 
+  </view>
+  <view class="weather_listdata">
+    <view class="wh_datas">
+      <view class="wh_tex">湿度</view>
+      <view class="wh_tex">气压</view>
+      <view class="wh_tex">能见度</view>
+    </view>
+    <view class="wh_datas">
+    <view class="wh_tex">{{nowweather.hum}}%</view>
+      <view class="wh_tex">{{nowweather.pres}}Pha</view>
+      <view class="wh_tex">{{nowweather.vis}}</view>
+    </view>
+    <view class="wh_datas">
+    <view class="wh_tex">风向</view>
+      <view class="wh_tex">风速</view>
+      <view class="wh_tex">风力</view>
+    </view>
+    <view class="wh_datas">
+    <view class="wh_tex">{{nowweather.wind_dir}}</view>
+      <view class="wh_tex">{{nowweather.wind_spd}}KM/h</view>
+      <view class="wh_tex">{{nowweather.wind_sc}}级</view>
+    </view>
+  </view>
+</view>
